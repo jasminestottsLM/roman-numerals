@@ -25,11 +25,11 @@ public class RomanNumeralsController {
     }
 
     @PostMapping("")
-    public ModelAndView convertNumber(int numberToConvert) {
-        String result = converter.convert(numberToConvert);
-
+    public ModelAndView convertNumber(int numberToConvert) { 	
+    	String result = converter.convert(numberToConvert);
         ModelAndView mv = new ModelAndView("romanNumerals/default");
         mv.addObject("conversion", result);
+      
         return mv;
     }
 
